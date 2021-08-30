@@ -53,6 +53,10 @@ function readDropdown() {
     console.log(newInput);
   } else if (dropdown.value === "5") {
     // If input is a password: Hide a password with the correct number of *s
+    const howMany = input.value.length;
+    const hideAll = input.value.slice(howMany);
+    newInput = hideAll.padStart(input.value.length, "*");
+    console.log(newInput);
   } else if (dropdown.value === "6") {
     // With any input: Make the third character uppercase
   } else {
