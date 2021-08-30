@@ -59,6 +59,8 @@ function readDropdown() {
     console.log(newInput);
   } else if (dropdown.value === "6") {
     // With any input: Make the third character uppercase
+    newInput = input.value.substring(0, 2).toLowerCase() + input.value.substring(2, 3).toUpperCase() + input.value.substring(3).toLowerCase();
+    console.log(newInput);
   } else {
     // With any input: Make a character uppercase, if it follows a space or a hyphen
     console.log("hej");
