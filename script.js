@@ -3,11 +3,11 @@
 // Opretter variabler
 const input = document.querySelector("#inputID");
 const dropdown = document.querySelector("#dropdown");
-const output = document.querySelector("#outpu");
+const output = document.querySelector("#output");
 const button = document.querySelector("#button");
 let newInput;
 
-window.addEventListener("DOMContentLoaded", start);
+window.addEventListener("DOMContentLoaded", start());
 
 function start() {
   // eventlistner på knap
@@ -29,7 +29,7 @@ function readDropdown() {
   console.log("Drop down value: " + dropdown.value);
   if (dropdown.value === "0") {
     // If input is a first name: Make the first character in a name uppercase, and the rest lowercase
-    newInput = input.value.substring(0, 1).toUpperCase() + input.value.substring(2).toLowerCase();
+    newInput = input.value.substring(0, 1).toUpperCase() + input.value.substring(1).toLowerCase();
     console.log(newInput);
   } else if (dropdown.value === "1") {
     // If input is a full name: Find the first name
@@ -64,8 +64,8 @@ function readDropdown() {
   } else {
     // With any input: Make a character uppercase, if it follows a space or a hyphen
     const findSpace = input.value.substring(input.value.indexOf(" ") + 1);
-    newInput = findSpace.substring(0, 1).toUpperCase() + findSpace.substring(2).toLowerCase();
     console.log(findSpace);
+    newInput = findSpace.substring(0, 1).toUpperCase() + findSpace.substring(1).toLowerCase();
     console.log(newInput);
   }
 
@@ -74,4 +74,5 @@ function readDropdown() {
 
 function writeResult() {
   console.log("writeResult");
+  document.querySelector("#output").innerHTML = newInput;
 }
