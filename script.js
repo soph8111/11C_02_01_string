@@ -38,7 +38,7 @@ function readDropdown() {
   } else if (dropdown.value === "2") {
     // If input is a full name: Find the length of the first name
     newInput = input.value.substring(input.value.indexOf(" "), input.value.substring(input.value.lastIndexOf(" ")));
-    newInput = newInput.length;
+    newInput = newInput.length.toString();
     console.log(newInput.length);
   } else if (dropdown.value === "3") {
     // If input is a full name: Find the middle name start and end position, and the middle name itself in a full name string
