@@ -32,11 +32,13 @@ function readDropdown() {
     newInput = input.value.substring(0, 1).toUpperCase() + input.value.substring(2).toLowerCase();
     console.log(newInput);
   } else if (dropdown.value === "1") {
-    //If input is a full name: Find the first name
+    // If input is a full name: Find the first name
     newInput = input.value.substring(input.value.indexOf(" "), input.value.substring(input.value.lastIndexOf(" ")));
     console.log(newInput);
   } else if (dropdown.value === "2") {
-    //If input is a full name: Find the length of the first name
+    // If input is a full name: Find the length of the first name
+    newInput = input.value.substring(input.value.indexOf(" "), input.value.substring(input.value.lastIndexOf(" ")));
+    console.log(newInput.length);
   } else if (dropdown.value === "3") {
     // If input is a full name: Find the middle name start and end position, and the middle name itself in a full name string
   } else if (dropdown.value === "4") {
