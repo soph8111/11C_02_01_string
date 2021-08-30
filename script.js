@@ -63,7 +63,10 @@ function readDropdown() {
     console.log(newInput);
   } else {
     // With any input: Make a character uppercase, if it follows a space or a hyphen
-    console.log("hej");
+    const findSpace = input.value.substring(input.value.indexOf(" ") + 1);
+    newInput = findSpace.substring(0, 1).toUpperCase() + findSpace.substring(2).toLowerCase();
+    console.log(findSpace);
+    console.log(newInput);
   }
 
   writeResult();
