@@ -33,6 +33,8 @@ function readDropdown() {
     console.log(newInput);
   } else if (dropdown.value === "1") {
     //If input is a full name: Find the first name
+    newInput = input.value.substring(input.value.indexOf(" "), input.value.substring(input.value.lastIndexOf(" ")));
+    console.log(newInput);
   } else if (dropdown.value === "2") {
     //If input is a full name: Find the length of the first name
   } else if (dropdown.value === "3") {
