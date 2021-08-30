@@ -41,6 +41,8 @@ function readDropdown() {
     console.log(newInput.length);
   } else if (dropdown.value === "3") {
     // If input is a full name: Find the middle name start and end position, and the middle name itself in a full name string
+    newInput = input.value.substring(input.value.indexOf(" ") + 1, input.value.lastIndexOf(" "));
+    console.log(newInput); // MANGLER POSITIONS
   } else if (dropdown.value === "4") {
     // If input is a filename: Check if a filename is .png or .jpg
   } else if (dropdown.value === "5") {
