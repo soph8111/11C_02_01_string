@@ -45,6 +45,12 @@ function readDropdown() {
     console.log(newInput); // MANGLER POSITIONS
   } else if (dropdown.value === "4") {
     // If input is a filename: Check if a filename is .png or .jpg
+    if (input.value.endsWith(".jpg") || input.value.endsWith(".png")) {
+      newInput = "Yes";
+    } else {
+      newInput = "No";
+    }
+    console.log(newInput);
   } else if (dropdown.value === "5") {
     // If input is a password: Hide a password with the correct number of *s
   } else if (dropdown.value === "6") {
