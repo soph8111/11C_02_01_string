@@ -1,0 +1,10 @@
+section {
+  display: grid;
+  width: 700px;
+  margin: auto;
+  grid-gap: 10px;
+}
+
+#output {
+  background-color: blue;
+}
