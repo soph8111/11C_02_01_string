@@ -42,7 +42,12 @@ function readDropdown() {
     console.log(newInput.length);
   } else if (dropdown.value === "3") {
     // If input is a full name: Find the middle name start and end position, and the middle name itself in a full name string
-    newInput = input.value.substring(input.value.indexOf(" ") + 1, input.value.lastIndexOf(" "));
+    const nameStart = input.value.substring(input.value.indexOf(" ") + 1, input.value.substring(input.value.lastIndexOf(" "))) + 1;
+    const middelname = input.value.substring(input.value.indexOf(" ") + 1, input.value.lastIndexOf(" "));
+    const nameEnd = nameStart.length + middelname.length - 1;
+    console.log(`Start position: ` + nameStart.length);
+    console.log(`End position: ` + nameEnd);
+    newInput = `The middelname is ${middelname}. The start position is: ${nameStart.length}. The end position is: ${nameEnd}`;
     console.log(newInput); // MANGLER POSITIONS
   } else if (dropdown.value === "4") {
     // If input is a filename: Check if a filename is .png or .jpg
